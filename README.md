@@ -4,7 +4,7 @@ This repository contains a combination of the libfreenect2 repository and the ex
 
 ## Setup
 Follow the setup instructrions for the libfreenect2, but clone this repository instead of the original.
-To run the script that uses OpenCV, run `./bin/KinectOneStream` after compilation.
+To run the script that uses OpenCV, run `./bin/KinectOneStream` in the build directory after compilation.
 
 ## Table of Contents
 
