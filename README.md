@@ -2,6 +2,8 @@
 
 This repository contains a combination of the libfreenect2 repository and the example script found at https://github.com/chihyaoma/KinectOneStream/blob/master/KinectOneStream.cpp used for converting data from the Kinect V2 to an OpenCV Mat, which is easier/more familiar to work with.
 
+See this video for a demo: https://youtu.be/1IHWOaHZEZc
+
 ## Setup
 Follow the setup instructrions for the libfreenect2, but clone this repository instead of the original.
 To run the script that uses OpenCV, run `./bin/KinectOneStream` in the build directory after compilation.
