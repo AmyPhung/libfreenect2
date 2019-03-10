@@ -35,12 +35,20 @@ ELSE()
   # Out-of-tree build will have to have DLLs manually copied.
 ENDIF()
 
+# For OpenCV
+find_package( OpenCV REQUIRED )
+
+
+
 INCLUDE_DIRECTORIES(
   ${freenect2_INCLUDE_DIR}
 )
 
 SET(Protonect_src
   Protonect.cpp
+)
+SET(KinectOneStream_src
+  KinectOneStream.cpp
 )
 
 SET(Protonect_LIBRARIES
@@ -76,8 +84,22 @@ ENDIF(ENABLE_OPENGL)
 ADD_EXECUTABLE(Protonect
   ${Protonect_src}
 )
+ADD_EXECUTABLE(KinectOneStream
+  ${KinectOneStream_src}
+)
+target_compile_options(KinectOneStream PRIVATE -fexceptions)
+
 
 TARGET_LINK_LIBRARIES(Protonect
+  ${Protonect_LIBRARIES}
+)
+
+
+TARGET_LINK_LIBRARIES(KinectOneStream
+  ${OpenCV_LIBS}
+)
+
+TARGET_LINK_LIBRARIES(KinectOneStream
   ${Protonect_LIBRARIES}
 )
 

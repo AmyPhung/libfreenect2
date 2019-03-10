@@ -356,6 +356,11 @@ int main(int argc, char *argv[])
     libfreenect2::Frame *rgb = frames[libfreenect2::Frame::Color];
     libfreenect2::Frame *ir = frames[libfreenect2::Frame::Ir];
     libfreenect2::Frame *depth = frames[libfreenect2::Frame::Depth];
+
+    // // DO SOMETHING WITH DEPTH 
+    // std::cout << depth->data_
+
+
 /// [loop start]
 
     if (enable_rgb && enable_depth)
